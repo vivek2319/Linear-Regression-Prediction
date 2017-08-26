@@ -1,0 +1,101 @@
+#First we will install tha package "UsingR" 
+#It has large collection of Data sets
+#The documentation for the package can be found here
+#https://www.rdocumentation.org/packages/UsingR/versions/2.0-5
+#After installing the package we will include that in our session 
+
+library(UsingR)
+
+#We will use father and son data set for this project
+
+data("father.son")
+head(father.son)
+
+#fheight comprises a list father's height. Similarly sheight comprises a list of son's height.
+#These heights are in inches 
+
+> head(father.son)
+
+fheight  sheight
+1 65.04851 59.77827
+2 63.25094 63.21404
+3 64.95532 63.34242
+4 65.75250 62.79238
+5 61.13723 64.28113
+6 63.02254 64.24221
+
+#The data has 1078 observations
+
+f <- father.son$fheight
+s<- father.son$sheight
+
+plot(f,s)
+
+MyLine <- abline(lm(s~f))
+
+#We will run correlation and covariance tests here
+
+My_Cor<-cor(f,s)
+
+My_Cor
+[1] 0.5013383
+
+#The correlation coefficient between father's height and So's height is 0.5013383. We can say, they are partially postiviely linearly related. Though, it is not so close to 1, by looking at graph we can say that, there is a postivie relationship.
+
+My_Cov <- cov(f,s)
+
+My_Cov
+[1] 3.873333
+
+#The covariance of father's height and Son's height is about 3.87333. It indicates a positive relationship between the two variables. 
+#lm is linear model fucntion, highly used for creating simple regression model
+
+lm(s ~ f, data=father.son)
+
+Call:
+  lm(formula = s ~ f, data = father.son)
+
+Coefficients:
+  (Intercept)            f  
+33.8866       0.5141  
+
+
+slope <- 0.5141
+intercept <- 33.8866
+
+#Let's see what the r-squared value is and p-values for same.
+
+linmod<-lm(s ~ f, data=father.son)
+
+summary(linmod)
+
+
+Call:
+  lm(formula = s ~ f, data = father.son)
+
+Residuals:
+  Min      1Q  Median      3Q     Max 
+-8.8772 -1.5144 -0.0079  1.6285  8.9685 
+
+Coefficients:
+  Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 33.88660    1.83235   18.49   <2e-16 ***
+  f            0.51409    0.02705   19.01   <2e-16 ***
+  ---
+  Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 2.437 on 1076 degrees of freedom
+Multiple R-squared:  0.2513,	Adjusted R-squared:  0.2506 
+F-statistic: 361.2 on 1 and 1076 DF,  p-value: < 2.2e-16
+
+#The data is scattered here, therefore R-squared value is low. P value is highly significant. Therefore, we reject the null hypothesis that there is no relationship between father's height and son's height. There exists significant relationship. 
+#So now, if we have to predict son's height by father's height, see what we will do here. Suppose Father's height is 70 inches, then the equation would be like this 
+#We know, the popular equation of line is y=mx+c, where m=slope and c=intercept
+#Here x1 = 70 inches, slope is 0.5141, intercept is 33.8866 
+#y1 <- slope * x1 + intercept is the equation of line
+
+y1 <- 0.5141 * 70 + 33.8866
+y1
+[1] 69.8736
+
+#As you observe, we just predicted what son's height would be if father's height is 70 inches
