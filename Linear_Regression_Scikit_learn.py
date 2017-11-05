@@ -17,13 +17,17 @@ df.describe()
 df.columns
 
 sns.pairplot(df)
+#Output for this line of code can be viewed at : https://tinyurl.com/y8qrm6pl
 
 sns.distplot(df['Price'])
+#Output for this line of code can be viewed at : https://tinyurl.com/yaaeax3o
 
 df.corr()
 sns.heatmap(df.corr())
+#Output for this line of code can be viewed at : https://tinyurl.com/ybr3jb2u
 
 sns.heatmap(df.corr(), annot=True)
+#Output for this line of code can be viewed at : https://tinyurl.com/y9nb5cbx
 
 
 df.columns
@@ -50,7 +54,6 @@ lm = LinearRegression()
 
 lm.fit(x_train, y_train)
 #Now LinearRegression model has trained 
-
 
 #Evaluate our model
 #Print the intercept
@@ -89,9 +92,11 @@ predictions
 #y_test contains correct prices 
 
 plt.scatter(y_test, predictions)
+#Output for this line of code can be viewed at : https://tinyurl.com/y8freepx
 
 #Let's create a histogram distribution of residuals 
 sns.distplot(y_test - predictions)
+#Output of this line of code can be viewed at : https://tinyurl.com/y7qlaubu
 
 #Regression evaluation matrix 
 
