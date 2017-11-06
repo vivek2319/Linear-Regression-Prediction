@@ -64,23 +64,26 @@ sns.set_style('whitegrid')
 
 # More time on site, more money spent.
 sns.jointplot(x='Time on Website',y='Yearly Amount Spent',data=customers)
+#Output for this line of code can be viewed at : https://tinyurl.com/ybscl8h6
 
 sns.jointplot(x='Time on App',y='Yearly Amount Spent',data=customers)
+#Output for this line of code can be viewed at : https://tinyurl.com/y8b789za
 
 sns.jointplot(x='Time on App',y='Length of Membership',kind='hex',data=customers)
-
+#Output for this line of code can viwed at : https://tinyurl.com/y7nzj9ed
 
 #Let's explore these types of relationships across the entire data set. 
 #Use pairplot to recreate the plot below.(Don't worry about the the colors)
 sns.pairplot(customers)
 
+#Output for this line of code can be viewed at : https://tinyurl.com/ycezak2r
 
 #Create a linear model plot (using seaborn's lmplot) of 
 #Yearly Amount Spent vs. Length of Membership. 
 
 
 sns.lmplot(x='Length of Membership',y='Yearly Amount Spent',data=customers)
-
+#Output for this line of code can be viewed at : https://tinyurl.com/y7jj9aqd
 
 #Training and Testing Data
 #Now that we've explored the data a bit, let's go ahead and split the data into 
@@ -138,6 +141,7 @@ plt.scatter(y_test,predictions)
 plt.xlabel('Y Test')
 plt.ylabel('Predicted Y')
 
+#Output for this line of code can be viewed at : https://tinyurl.com/y9dldgcj
 
 #Evaluating the Model
 
@@ -164,6 +168,7 @@ print('RMSE:', np.sqrt(metrics.mean_squared_error(y_test, predictions)))
 #Use either seaborn distplot, or just plt.hist().
 
 sns.distplot((y_test-predictions),bins=50)
+#Output for this line of code can be viewed at : https://tinyurl.com/y9rqfsjb
 
 #Conclusion
 
