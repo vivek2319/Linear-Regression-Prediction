@@ -14,4 +14,4 @@ Least Square “Linear Regression” is a statistical method to regress the data
 method to predict dependent variable (Y) based on values of independent variables (X).  It can be used for the cases where we 
 want to predict some continuous quantity.
 
-![https://tinyurl.com/y7pfk9fc](Linear Regression)
+![Linear Regression Explanation](http://ictedusrv.cumbria.ac.uk/maths/SecMaths/U4/images/pic111.gif)
