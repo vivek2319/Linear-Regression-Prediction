@@ -1,6 +1,6 @@
 # Linear-Regression-Prediction
 _Note: This repository focuses on the projects that I would be doing on "Linear Regression". Feel free to make any improvements.
-Thanks. The theory given here is taken from various sources over internet. Me as a owner of this project do not claim it's ownership in any whatsoevr way_
+The theory given here is taken from various sources over internet. Me as a owner of this project do not claim it's ownership in any whatsoevr way._
 
 
 ## Introduction :
