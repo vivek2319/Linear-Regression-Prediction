@@ -1,0 +1,190 @@
+What is Regression Analysis?
+
+Lets take a simple example : Suppose your manager asked you to predict annual sales. There can be a hundred of factors (drivers) that affects sales. In this case, sales is your dependent variable. Factors affecting sales are independent variables. Regression analysis would help you to solve this problem.
+
+In simple words, regression analysis is used to model the relationship between a dependent variable and one or more independent variables.
+
+It helps us to answer the following questions –
+
+   - Which of the drivers have a significant impact on sales. 
+   - Which is the most important driver of sales
+   - How do the drivers interact with each other
+   - What would be the annual sales next year.
+
+Terminologies related to regression analysis
+
+1. Outliers
+Suppose there is an observation in the dataset which is having a very high or very low value as compared to the other observations in the data, i.e. it does not belong to the population, such an observation is called an outlier. In simple words, it is extreme value. An outlier is a problem because many times it hampers the results we get.
+
+2. Multicollinearity
+When the independent variables are highly correlated to each other then the variables are said to be multicollinear. Many types of regression techniques assumes multicollinearity should not be present in the dataset. It is because it causes problems in ranking variables based on its importance. Or it makes job difficult in selecting the most important independent variable (factor).
+
+3. Heteroscedasticity
+When dependent variable’s variability is not equal across values of an independent variable, it is called heteroscedasticity. Example – As one’s income increases, the variability of food consumption will increase. A poorer person will spend a rather constant amount by always eating inexpensive food; a wealthier person may occasionally buy inexpensive food and at other times eat expensive meals. Those with higher incomes display a greater variability of food consumption.
+
+4. Underfitting and Overfitting
+When we use unnecessary explanatory variables it might lead to overfitting. Overfitting means that our algorithm works well on the training set but is unable to perform better on the test sets. It is also known as problem of high variance.
+
+When our algorithm works so poorly that it is unable to fit even training set well then it is said to underfit the data. It is also known as problem of high bias.
+
+
+Assumptions of linear regression: 
+
+   1)There must be a linear relation between independent and dependent variables. 
+   2) There should not be any outliers present. 
+   3) No heteroscedasticity 
+   4) Sample observations should be independent. 
+   5) Error terms should be normally distributed with mean 0 and constant variance. 
+   6) Absence of multicollinearity and auto-correlation.
+
+
+
+Welcome!
+Here you will find daily news and tutorials about R, contributed by over 750 bloggers.
+There are many ways to follow us -
+By e-mail:
+On Facebook:
+If you are an R blogger yourself you are invited to add your own R content feed to this site (Non-English R bloggers should add themselves- here)
+RSS Jobs for R-users
+
+    Backtesting stock-trading strategy
+    Director, Data Labs
+    R Report Builder
+    Statistician/Econometrician – R Programmer for Academic Statistical Research (for 2-3 weeks)
+    Customer Success Rep
+
+Popular Searches
+Recent Posts
+
+    DALEX: which variables are really important? Ask your black box model!
+    R package for M4 Forecasting Competition
+    15 Types of Regression you should know
+    Data Visualization Website with Shiny
+    ShinyProxy 1.1.0 released!
+    The Bull Survived on Friday, but Barely
+    Exploring the underlying theory of the chi-square test through simulation – part 2
+    Storrrify #satRdayCapeTown 2018
+    1st LSE CSS Hackathon! London 17-19 April
+    On MIMEs, software versions and web site promiscuity (a.k.a. three new packages to round out the week)
+    Plotting US Metro Area GDP with ggplot
+    Deep Learning from first principles in Python, R and Octave – Part 5
+    RcppCNPy 0.2.9
+    Should I learn sf or sp for spatial R programming
+    The most prolific package maintainers on CRAN
+
+Other sites
+
+    Jobs for R-users
+    SAS blogs
+
+15 Types of Regression you should know
+March 25, 2018
+By ListenData
+
+inShare
+(This article was first published on ListenData, and kindly contributed to R-bloggers)
+
+563
+SHARES
+Share
+Tweet
+Regression techniques are one of the most popular statistical techniques used for predictive modeling and data mining tasks. On average, analytics professionals know only 2-3 types of regression which are commonly used in real world. They are linear and logistic regression. But the fact is there are more than 10 types of regression algorithms designed for various types of analysis. Each type has its own significance. Every analyst must know which form of regression to use depending on type of data and distribution.
+
+Table of Contents
+
+    What is Regression Analysis?
+    Terminologies related to Regression
+    Types of Regressions
+        Linear Regression
+        Polynomial Regression
+        Logistic Regression
+        Quantile Regression
+        Ridge Regression
+        Lasso Regression
+        ElasticNet Regression
+        Principal Component Regression
+        Partial Least Square Regression
+        Support Vector Regression
+        Ordinal Regression
+        Poisson Regression
+        Negative Binomial Regression
+        Quasi-Poisson Regression
+        Cox Regression
+    How to choose the correct Regression Model?
+
+Regression Analysis Simplified
+What is Regression Analysis?
+
+Lets take a simple example : Suppose your manager asked you to predict annual sales. There can be a hundred of factors (drivers) that affects sales. In this case, sales is your dependent variable. Factors affecting sales are independent variables. Regression analysis would help you to solve this problem.
+
+    In simple words, regression analysis is used to model the relationship between a dependent variable and one or more independent variables.
+
+It helps us to answer the following questions –
+
+    Which of the drivers have a significant impact on sales. 
+    Which is the most important driver of sales
+    How do the drivers interact with each other
+    What would be the annual sales next year.
+
+Terminologies related to regression analysis
+
+1. Outliers
+Suppose there is an observation in the dataset which is having a very high or very low value as compared to the other observations in the data, i.e. it does not belong to the population, such an observation is called an outlier. In simple words, it is extreme value. An outlier is a problem because many times it hampers the results we get.
+
+2. Multicollinearity
+When the independent variables are highly correlated to each other then the variables are said to be multicollinear. Many types of regression techniques assumes multicollinearity should not be present in the dataset. It is because it causes problems in ranking variables based on its importance. Or it makes job difficult in selecting the most important independent variable (factor).
+
+3. Heteroscedasticity
+When dependent variable’s variability is not equal across values of an independent variable, it is called heteroscedasticity. Example – As one’s income increases, the variability of food consumption will increase. A poorer person will spend a rather constant amount by always eating inexpensive food; a wealthier person may occasionally buy inexpensive food and at other times eat expensive meals. Those with higher incomes display a greater variability of food consumption.
+
+4. Underfitting and Overfitting
+When we use unnecessary explanatory variables it might lead to overfitting. Overfitting means that our algorithm works well on the training set but is unable to perform better on the test sets. It is also known as problem of high variance.
+
+When our algorithm works so poorly that it is unable to fit even training set well then it is said to underfit the data. It is also known as problem of high bias.
+
+In the following diagram we can see that fitting a linear regression (straight line in fig 1) would underfit the data i.e. it will lead to large errors even in the training set. Using a polynomial fit in fig 2 is balanced i.e. such a fit can work on the training and test sets well, while in fig 3 the fit will lead to low errors in training set but it will not work well on the test set.
+Underfitting vs Overfitting
+Regression : Underfitting and Overfitting
+Types of Regression
+
+Every regression technique has some assumptions attached to it which we need to meet before running analysis. These techniques differ in terms of type of dependent and independent variables and distribution.
+1. Linear Regression
+
+It is the simplest form of regression. It is a technique in which the dependent variable is continuous in nature. The relationship between the dependent variable and independent variables is assumed to be linear in nature. We can observe that the given plot represents a somehow linear relationship between the mileage and displacement of cars. The green points are the actual observations while the black line fitted is the line of regression
+
+regression analysis
+Regression Analysis
+
+    When you have only 1 independent variable and 1 dependent variable, it is called simple linear regression.
+    When you have more than 1 independent variable and 1 dependent variable, it is called simple linear regression.
+
+The equation of linear regression is listed below –
+
+Multiple Regression Equation
+Here ‘y’ is the dependent variable to be estimated, and X are the independent variables and ε is the error term. βi’s are the regression coefficients.
+
+Assumptions of linear regression: 
+
+    There must be a linear relation between independent and dependent variables. 
+    There should not be any outliers present. 
+    No heteroscedasticity 
+    Sample observations should be independent. 
+    Error terms should be normally distributed with mean 0 and constant variance. 
+    Absence of multicollinearity and auto-correlation.
+
+Estimating the parametersTo estimate the regression coefficients βi’s we use principle of least squares which is to minimize the sum of squares due to the error terms i.e.
+
+On solving the above equation mathematically we obtain the regression coefficients as:
+
+Interpretation of regression coefficients
+ Let us consider an example where the dependent variable is marks obtained by a student and explanatory variables are number of hours studied and no. of classes attended. Suppose on fitting linear regression we got the linear regression as:
+
+    Marks obtained = 5 + 2 (no. of hours studied) + 0.5(no. of classes attended)
+
+Thus we can have the regression coefficients 2 and 0.5 which can interpreted as:
+
+   - If no. of hours studied and no. of classes are 0 then the student will obtain 5 marks.
+   - Keeping no. of classes attended constant, if student studies for one hour more then he will score 2 more marks in the     
+     examination. 
+   - Similarly keeping no. of hours studied constant, if student attends one more class then he will attain 0.5 marks more.
+
