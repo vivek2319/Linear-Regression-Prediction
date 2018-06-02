@@ -4,7 +4,7 @@ The theory given here is taken from various sources over internet. Me as a owner
 
 
 ## Introduction :
-Lets first know what we mean by Regression. Regression is a statistical way to establish a relationship between a dependent variable and a set of independent variable(s). e.g., if we say that
+Lets first know what we mean by Regression. Regression is a statistical way to establish a relationship between a dependent variable and a set of independent variable(s). e.g., if we say 
 
 Age = 5 + Height * 10 + Weight * 13
 
