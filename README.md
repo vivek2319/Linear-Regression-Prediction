@@ -14,6 +14,7 @@ Simple Linear Regression
 Least Square “Linear Regression” is a statistical method to regress the data with dependent variable having continuous values whereas independent variables can have either continuous or categorical values. In other words “Linear Regression” is a 
 method to predict dependent variable (Y) based on values of independent variables (X).  It can be used for the cases where we 
 want to predict some continuous quantity. 
+
 ![Linear Regression Explanation](http://ictedusrv.cumbria.ac.uk/maths/SecMaths/U4/images/pic111.gif)
 
 Any line can be characterized by its intercept and slope. The slope is the change in y for a one-unit change in x. Also, an equivalent definition is the change in y divided by the change in x for any segment of the line. 
